@@ -92,12 +92,12 @@ type ClientTests =
 // Testing and reporting for criminal record
 let testCriminal(client) = client.CriminalRecord = true
 let reportCriminal(client) =
-    printfn "'%s' has a criminal record!" client.Name
+  printfn "'%s' has a criminal record!" client.Name
 
 // Tests required minimal income
 let testIncome(client) = client.Income < 30000
 let reportIncome(client) =
-    printfn "Income of '%s' is less than 30000!" client.Name
+  printfn "Income of '%s' is less than 30000!" client.Name
 
 // Tests required years in the current job
 let testJobYears(client) = client.YearsInJob < 2
