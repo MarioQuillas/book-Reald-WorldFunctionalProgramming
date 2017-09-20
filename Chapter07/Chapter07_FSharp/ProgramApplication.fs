@@ -47,7 +47,6 @@
     // Image file name with bounding box
     | ImageElement of string * Rect
 
-
   // ----------------------------------------------------------------------------
   // Section 7.2.1 Drawing documents
  

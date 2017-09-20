@@ -70,8 +70,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountWordsVisitor.cs" />
+    <Compile Include="DocumentPart.cs" />
+    <Compile Include="DocumentPartVisitor.cs" />
+    <Compile Include="DocumentToScreen.cs" />
+    <Compile Include="ImageElement.cs" />
+    <Compile Include="ImagePart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenElement.cs" />
+    <Compile Include="SplitPart.cs" />
+    <Compile Include="TextContent.cs" />
+    <Compile Include="TextElement.cs" />
+    <Compile Include="TextPart.cs" />
+    <Compile Include="TitledPart.cs" />
+    <Compile Include="TranslationState.cs" />
+    <Compile Include="XmlLoader.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
