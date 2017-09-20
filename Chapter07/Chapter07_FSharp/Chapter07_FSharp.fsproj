@@ -60,6 +60,8 @@
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
+    <Content Include="Document.xml" />
+    <None Include="Cover.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

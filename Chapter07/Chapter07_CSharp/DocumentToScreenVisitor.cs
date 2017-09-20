@@ -5,7 +5,7 @@
 
     using FunctionalCSharp;
 
-    class DocumentToScreen : DocumentPartVisitor<TranslationState>
+    class DocumentToScreenVisitor : DocumentPartVisitor<TranslationState>
     {
         public override TranslationState VisitImagePart(ImagePart part, TranslationState ctx)
         {

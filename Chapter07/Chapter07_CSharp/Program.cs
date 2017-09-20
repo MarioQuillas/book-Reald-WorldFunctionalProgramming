@@ -37,12 +37,20 @@ namespace Chapter07_CSharp
             // Load document and convert it to flat representation (using visitor)
             var doc = XmlLoader.LoadDocument("..\\..\\document.xml");
             var screenParts = doc.Accept(
-                new DocumentToScreen(),
+                new DocumentToScreenVisitor(),
                 new TranslationState { Rect = new RectangleF(0.0f, 0.0f, 520.0f, 630.0f) }).Result;
 
             // Show the main form with the document
-            var main = new Form() { Text = "Document", ClientSize = new Size(570, 680) };
-            main.BackgroundImage = DrawImage(570, 680, 20.0f, (gr) => screenParts.Iter((part) => part.DrawPart(gr)));
+            var main = new Form
+                           {
+                               Text = "Document",
+                               ClientSize = new Size(570, 680),
+                               BackgroundImage = DrawImage(
+                                   570,
+                                   680,
+                                   20.0f,
+                                   (gr) => screenParts.Iter((part) => part.DrawPart(gr)))
+                           };
 
             // Run the word-counting visitor and display the result
             int count = doc.Accept(new CountWordsVisitor(), 0);

@@ -193,14 +193,14 @@
   let parseFont(node) =
     let value = attr(node, "style", "")
     let style = 
-        // Tests whether the attribute contains specified strings
-        match value.Contains("bold"), value.Contains("italic") with
-        | true,  false -> FontStyle.Bold
-        | false, true  -> FontStyle.Italic
-        | true,  true  -> 
-            // Combine two options of .NET enumeration
-            FontStyle.Bold ||| FontStyle.Italic
-        | false, false -> FontStyle.Regular
+      // Tests whether the attribute contains specified strings
+      match value.Contains("bold"), value.Contains("italic") with
+      | true,  false -> FontStyle.Bold
+      | false, true  -> FontStyle.Italic
+      | true,  true  -> 
+        // Combine two options of .NET enumeration
+        FontStyle.Bold ||| FontStyle.Italic
+      | false, false -> FontStyle.Regular
     let name = attr(node, "font", "Calibri")
     new Font(name, float32(attr(node, "size", "12")), style)
 

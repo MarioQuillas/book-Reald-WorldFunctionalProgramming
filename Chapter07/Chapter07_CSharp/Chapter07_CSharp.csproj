@@ -73,7 +73,7 @@
     <Compile Include="CountWordsVisitor.cs" />
     <Compile Include="DocumentPart.cs" />
     <Compile Include="DocumentPartVisitor.cs" />
-    <Compile Include="DocumentToScreen.cs" />
+    <Compile Include="DocumentToScreenVisitor.cs" />
     <Compile Include="ImageElement.cs" />
     <Compile Include="ImagePart.cs" />
     <Compile Include="Program.cs" />
