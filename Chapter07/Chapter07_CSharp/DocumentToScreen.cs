@@ -9,7 +9,9 @@
     {
         public override TranslationState VisitImagePart(ImagePart part, TranslationState ctx)
         {
-            ctx.Result = FuncList.Cons(new ImageElement(part.Url, ctx.Rect), FuncList.Empty<ScreenElement>());
+            ctx.Result = FuncListUtility.Cons(
+                new ImageElement(part.Url, ctx.Rect),
+                FuncListUtility.Empty<ScreenElement>());
             return ctx;
         }
 
@@ -41,7 +43,9 @@
 
         public override TranslationState VisitTextPart(TextPart part, TranslationState ctx)
         {
-            ctx.Result = FuncList.Cons(new TextElement(part.Text, ctx.Rect), FuncList.Empty<ScreenElement>());
+            ctx.Result = FuncListUtility.Cons(
+                new TextElement(part.Text, ctx.Rect),
+                FuncListUtility.Empty<ScreenElement>());
             return ctx;
         }
 
@@ -50,7 +54,7 @@
             var rc = new RectangleF(ctx.Rect.Left, ctx.Rect.Top + 35.0f, ctx.Rect.Width, ctx.Rect.Height - 35.0f);
             var bodyElements = part.Body.Accept(this, new TranslationState { Rect = rc }).Result;
             var titleRc = new RectangleF(ctx.Rect.Left, ctx.Rect.Top, ctx.Rect.Width, 35.0f);
-            ctx.Result = FuncList.Cons(new TextElement(part.Text, titleRc), bodyElements);
+            ctx.Result = FuncListUtility.Cons(new TextElement(part.Text, titleRc), bodyElements);
             return ctx;
         }
     }

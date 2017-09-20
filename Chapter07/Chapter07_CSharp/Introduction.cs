@@ -1,11 +1,10 @@
-﻿
-
-// --------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------
 // Functional Programming in .NET - Chapter 7
 // --------------------------------------------------------------------------
 // This file contains code samples that are not related to the primary
 // example of the chapter (document drawing application).
 // --------------------------------------------------------------------------
+
 namespace Chapter07_CSharp_Introduction
 {
     // --------------------------------------------------------------------------
@@ -14,14 +13,14 @@ namespace Chapter07_CSharp_Introduction
     // Listing 7.3 Immutable 'Rect' type (C#)
     class Rect
     {
+        private readonly float height;
+
         // Readonly properties of the type
         private readonly float left;
 
         private readonly float top;
 
         private readonly float width;
-
-        private readonly float height;
 
         // Construct the value
         public Rect(float left, float top, float width, float height)

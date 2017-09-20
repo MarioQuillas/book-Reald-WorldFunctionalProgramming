@@ -5,6 +5,7 @@
 // the document drawing application.
 // NOTE: This isn't fully commented yet. 
 // --------------------------------------------------------------------------
+
 namespace Chapter07_CSharp
 {
     using System;

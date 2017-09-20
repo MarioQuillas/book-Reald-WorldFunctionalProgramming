@@ -67,9 +67,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="List.cs" />
-    <Compile Include="Option.cs" />
-    <Compile Include="Tuple.cs" />
+    <Compile Include="FuncList.cs" />
+    <Compile Include="FuncListUtility.cs" />
+    <Compile Include="None.cs" />
+    <Compile Include="OptionUtility.cs" />
+    <Compile Include="OptionType.cs" />
+    <Compile Include="OptionUtils.cs" />
+    <Compile Include="Some.cs" />
+    <Compile Include="TupleExtensions.cs" />
+    <Compile Include="TupleUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
